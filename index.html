@@ -11,6 +11,7 @@
   <meta property="og:image" content="asset/photo/profile.png">
   <title>Goldius Leonard | AI Engineer</title>
 
+  <link rel="icon" type="image/svg+xml" href="asset/logo/logo.svg">
   <link rel="icon" type="image/png" href="asset/logo/html-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,10 +65,20 @@
       border-bottom:1px solid var(--border);
     }
     .nav-logo {
-      font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:700;
-      background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-      background-clip:text; text-decoration:none; letter-spacing:-.02em;
+      display:flex; align-items:center; gap:.55rem;
+      text-decoration:none; flex-shrink:0;
     }
+    .nav-logo-mark {
+      width:34px; height:34px; border-radius:8px; display:block; flex-shrink:0;
+      transition:var(--ease);
+    }
+    nav.scrolled .nav-logo-mark { filter:drop-shadow(0 0 8px rgba(124,58,237,.5)); }
+    .nav-logo-text {
+      font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:700;
+      background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-clip:text; letter-spacing:-.02em; white-space:nowrap;
+    }
+    @media(max-width:480px){ .nav-logo-text { display:none; } }
     .nav-links { display:flex; list-style:none; gap:.1rem; }
     .nav-links a {
       color:var(--txt2); text-decoration:none; font-size:.875rem; font-weight:500;
@@ -505,7 +516,32 @@
 
 <!-- ░░ NAV ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
 <nav id="nav">
-  <a href="#hero" class="nav-logo">GL</a>
+  <a href="#hero" class="nav-logo">
+    <svg class="nav-logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="nlg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#7c3aed"/>
+          <stop offset="100%" stop-color="#06b6d4"/>
+        </linearGradient>
+      </defs>
+      <rect width="100" height="100" rx="20" fill="#06060f"/>
+      <rect width="100" height="100" rx="20" fill="url(#nlg)" opacity="0.07"/>
+      <rect x="1.5" y="1.5" width="97" height="97" rx="18.5" fill="none" stroke="url(#nlg)" stroke-width="2.5" opacity="0.7"/>
+      <circle cx="19" cy="19" r="3.5" fill="#7c3aed" opacity="0.85"/>
+      <circle cx="81" cy="19" r="3.5" fill="#06b6d4" opacity="0.85"/>
+      <circle cx="19" cy="81" r="3.5" fill="#06b6d4" opacity="0.6"/>
+      <circle cx="81" cy="81" r="3.5" fill="#7c3aed" opacity="0.6"/>
+      <circle cx="50" cy="14" r="2" fill="url(#nlg)" opacity="0.5"/>
+      <line x1="22" y1="19" x2="78" y2="19" stroke="url(#nlg)" stroke-width="0.9" opacity="0.25"/>
+      <line x1="22" y1="81" x2="78" y2="81" stroke="url(#nlg)" stroke-width="0.9" opacity="0.18"/>
+      <line x1="19" y1="22" x2="19" y2="78" stroke="url(#nlg)" stroke-width="0.9" opacity="0.18"/>
+      <line x1="81" y1="22" x2="81" y2="78" stroke="url(#nlg)" stroke-width="0.9" opacity="0.18"/>
+      <line x1="22" y1="19" x2="48" y2="16" stroke="url(#nlg)" stroke-width="0.7" opacity="0.2"/>
+      <line x1="78" y1="19" x2="52" y2="16" stroke="url(#nlg)" stroke-width="0.7" opacity="0.2"/>
+      <text x="50" y="67" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-size="44" font-weight="900" text-anchor="middle" fill="url(#nlg)">GL</text>
+    </svg>
+    <span class="nav-logo-text">Goldius Leonard</span>
+  </a>
   <ul class="nav-links">
     <li><a href="#hero"       class="nl active">Home</a></li>
     <li><a href="#about"      class="nl">About</a></li>

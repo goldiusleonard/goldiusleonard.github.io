@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="100" height="100" rx="20" fill="#06060f"/>
+
+  <!-- Subtle gradient tint -->
+  <rect width="100" height="100" rx="20" fill="url(#g)" opacity="0.07"/>
+
+  <!-- Gradient border ring -->
+  <rect x="1.5" y="1.5" width="97" height="97" rx="18.5"
+        fill="none" stroke="url(#g)" stroke-width="2.5" opacity="0.7"/>
+
+  <!-- Neural node  top-left -->
+  <circle cx="19" cy="19" r="3.5" fill="#7c3aed" opacity="0.85"/>
+  <!-- Neural node  top-right -->
+  <circle cx="81" cy="19" r="3.5" fill="#06b6d4" opacity="0.85"/>
+  <!-- Neural node  bottom-left -->
+  <circle cx="19" cy="81" r="3.5" fill="#06b6d4" opacity="0.6"/>
+  <!-- Neural node  bottom-right -->
+  <circle cx="81" cy="81" r="3.5" fill="#7c3aed" opacity="0.6"/>
+  <!-- Neural node  centre-top (small) -->
+  <circle cx="50" cy="14" r="2" fill="url(#g)" opacity="0.5"/>
+
+  <!-- Connecting edges -->
+  <line x1="22" y1="19" x2="78" y2="19" stroke="url(#g)" stroke-width="0.9" opacity="0.25"/>
+  <line x1="22" y1="81" x2="78" y2="81" stroke="url(#g)" stroke-width="0.9" opacity="0.18"/>
+  <line x1="19" y1="22" x2="19" y2="78" stroke="url(#g)" stroke-width="0.9" opacity="0.18"/>
+  <line x1="81" y1="22" x2="81" y2="78" stroke="url(#g)" stroke-width="0.9" opacity="0.18"/>
+  <line x1="22" y1="19" x2="48" y2="16" stroke="url(#g)" stroke-width="0.7" opacity="0.2"/>
+  <line x1="78" y1="19" x2="52" y2="16" stroke="url(#g)" stroke-width="0.7" opacity="0.2"/>
+
+  <!-- GL monogram -->
+  <text x="50" y="67"
+        font-family="'Arial Black','Helvetica Neue',Arial,sans-serif"
+        font-size="44" font-weight="900"
+        text-anchor="middle"
+        fill="url(#g)">GL</text>
+</svg>
